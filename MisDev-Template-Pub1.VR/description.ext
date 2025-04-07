@@ -1,12 +1,12 @@
 // V3.10b
 
 onLoadName      = "Arma Template V3.10";   // Name of the mission shown in the loading screen.
-onLoadMission   = "AM 2 Mission Template"; // Description of the mission shown in the loading screen.
-author          = "MisDev";                // Author of the mission.
-loadScreen      = "TAW.paa";               // Path to image which will be displayed displayed in the loading screen. Has to be a .paa or a .jpg file. 2:1 aspect ratio, ideally 1024x512.
+onLoadMission   = "MisDev Template"; // Description of the mission shown in the loading screen.
+author          = "Dyn";                // Author of the mission.
+loadScreen      = "";               // Path to image which will be displayed displayed in the loading screen. Has to be a .paa or a .jpg file. 2:1 aspect ratio, ideally 1024x512.
 
 overviewText    = "Mission";               // Text to be displayed below the overviewPicture on the mission selection screen.
-overviewPicture = "TAW.paa";               // Path to image which will be displayed when the mission is highlighted on the mission selection screen. Has to be a .paa or a .jpg file. 2:1 aspect ratio, ideally 1024x512.
+overviewPicture = "";               // Path to image which will be displayed when the mission is highlighted on the mission selection screen. Has to be a .paa or a .jpg file. 2:1 aspect ratio, ideally 1024x512.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

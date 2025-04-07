@@ -1,0 +1,81 @@
+// V3.10b
+
+onLoadName      = "Arma Template V3.10";   // Name of the mission shown in the loading screen.
+onLoadMission   = "AM 2 Mission Template"; // Description of the mission shown in the loading screen.
+author          = "MisDev";                // Author of the mission.
+loadScreen      = "TAW.paa";               // Path to image which will be displayed displayed in the loading screen. Has to be a .paa or a .jpg file. 2:1 aspect ratio, ideally 1024x512.
+
+overviewText    = "Mission";               // Text to be displayed below the overviewPicture on the mission selection screen.
+overviewPicture = "TAW.paa";               // Path to image which will be displayed when the mission is highlighted on the mission selection screen. Has to be a .paa or a .jpg file. 2:1 aspect ratio, ideally 1024x512.
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Mission Header
+class Header
+{
+  gameType = Coop;
+  minPlayers = 1;
+  maxPlayers = 100;
+};
+
+// Respawn
+respawn = 3;
+respawndelay = 0.1;
+respawnOnStart = 0;
+
+// Disable AI on start
+disabledAI=1;
+
+// Disable Channels, Number Correspondence: 0 = Global , 1 = Side , 2 = Command , 3 = Group , 4 = Vehicle , 5 = Direct , 6 = System
+disableChannels[]={{0,true,true},{1,false,true},{2,true,true},{3,false,true},{4,false,true},{5,false,false},{6,false,false}};
+
+// Corpse/Wreck Removal Settings
+///////////////////////////////////////
+
+disposalCheckPeriod        = 30;
+minPlayerDistance[]        = {100, 400, 100};
+
+corpseManagerMode          = 1;
+corpseLimit                = 20;
+corpseRemovalMinTime       = 120;
+corpseRemovalMaxTime       = 900;
+
+wreckManagerMode           = 1;
+wreckLimit                 = 5;
+wreckRemovalMinTime        = 600;
+wreckRemovalMaxTime        = 1800;
+
+weaponholderManagerMode    = 1;
+weaponholderLimit          = 20;
+weaponholderRemovalMinTime = 120;
+weaponholderRemovalMaxTime = 900;
+
+///////////////////////////////////////
+
+// Debug Console
+enableDebugConsole = 1;
+allowFunctionsRecompile = 1;
+// 0 - None | 1 - Attributes | 2 - Init scripts
+zeusCompositionScriptLevel = 1;
+
+// dyn Modules
+class CfgFunctions
+{
+  class dyn {
+    tag = "dyn";
+    #include "scripts\dyn\include.h"
+  };
+};
+
+// Rappeling Functions
+class CfgRemoteExec
+{
+  class Functions
+  {
+    class AUR_Hint { allowedTargets=1; };
+    class AUR_Hide_Object_Global { allowedTargets=2; };
+    class AUR_Enable_Rappelling_Animation_Global { allowedTargets=2; };
+    class AUR_Play_Rappelling_Sounds_Global { allowedTargets=2; };
+  };
+};
